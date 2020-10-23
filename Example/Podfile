@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GBKProgressButton_Example' do
+  pod 'GBKProgressButton', :path => '../'
+
+  target 'GBKProgressButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
