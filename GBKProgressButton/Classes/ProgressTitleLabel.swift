@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ProgressTitleLabel: UILabel {
+public final class ProgressTitleLabel: UILabel {
 
     private let animationSettings: AnimationSettings
 

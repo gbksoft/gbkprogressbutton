@@ -51,7 +51,7 @@ import UIKit
         }
     }
 
-    private(set) lazy var titleLabel = ProgressTitleLabel(animationSettings: animationSettings)
+    public private(set) lazy var titleLabel = ProgressTitleLabel(animationSettings: animationSettings)
     private let animationSettings = AnimationSettings()
     private var prevValue: CGFloat = 0
     private var animationDelayWorkItem: DispatchWorkItem?
