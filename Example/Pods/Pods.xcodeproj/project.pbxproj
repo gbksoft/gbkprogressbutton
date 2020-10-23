@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CFD0CA10F7D74E9C2A2ED2782094C2A /* Pods-GBKProgressButton_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF273BFF98B9CD4011F38CA49E8827A5 /* Pods-GBKProgressButton_Tests-dummy.m */; };
+		5D835E84A28E2330896EBDADAE22349C /* ProgressTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A04856144CB4651F53E9703B7C03D1 /* ProgressTitleLabel.swift */; };
+		60270C5972AC8C25CB0C78A03288BED3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		67F07003DED2B7209A58273A8F17E6D4 /* GBKProgressButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B66DE84E4FEF1891C446320BE0F7788F /* GBKProgressButton-dummy.m */; };
+		795347AEFDC50DABE1F07C51941D3B7E /* Pods-GBKProgressButton_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D877BC7272002330D1C8E35EFDB570 /* Pods-GBKProgressButton_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ABB0678CF617DB0B33B2656D2E232D1 /* GBKProgressButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0F827F7E5F6348E205C6063EFED232 /* GBKProgressButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85EE101EC6BADDC52763486926DE2260 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		ABB770AA08BB4456DDC982CFD43A0CE2 /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3120AC5BA7BAA9E636F00868224B56F /* ProgressButton.swift */; };
+		D581BE33080AFE6F9C3845DEF46E48AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D64493739FD89206B174482B8944340D /* Pods-GBKProgressButton_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F470A475DABFBA177F2882177283F199 /* Pods-GBKProgressButton_Example-dummy.m */; };
+		D6523B7B5D987BBA219343D7AE4CB61D /* Pods-GBKProgressButton_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 758EE9FC9104B0D9BB925807B8E546D6 /* Pods-GBKProgressButton_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E46445161A20964A0B0BB48B26A83F23 /* AnimationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45604462FD3497D534A283AB5ED7F17 /* AnimationSettings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9059C0E353490375926CF1E22499B98E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7089B3D9B0369D2E689633354E8ACCBE;
+			remoteInfo = "Pods-GBKProgressButton_Example";
+		};
+		9C4AF9F36B3C89745A816D0B231B3BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81A900E93EA3534D5AA1AB82CEC5BDEF;
+			remoteInfo = GBKProgressButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F0C6537C45507B03E738093D833BD0A /* Pods-GBKProgressButton_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBKProgressButton_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0F9B5433EE845961CD982BF9CA1CFA66 /* GBKProgressButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GBKProgressButton-Info.plist"; sourceTree = "<group>"; };
+		20D877BC7272002330D1C8E35EFDB570 /* Pods-GBKProgressButton_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBKProgressButton_Tests-umbrella.h"; sourceTree = "<group>"; };
+		232DB178ED15F059C926AB95EE605EA8 /* Pods-GBKProgressButton_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBKProgressButton_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		23A04856144CB4651F53E9703B7C03D1 /* ProgressTitleLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressTitleLabel.swift; path = GBKProgressButton/Classes/ProgressTitleLabel.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		386227A3E5E15D31506CFAF27328BB24 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		493E8A2794BBA86527A8FDC9E81FA661 /* Pods-GBKProgressButton_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBKProgressButton_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4CC1A2FA220805CD7676CC7E598C2B1F /* Pods_GBKProgressButton_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GBKProgressButton_Tests.framework; path = "Pods-GBKProgressButton_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0F827F7E5F6348E205C6063EFED232 /* GBKProgressButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBKProgressButton-umbrella.h"; sourceTree = "<group>"; };
+		61A4BE66DB095B5BE22FA35296C3AC2C /* Pods-GBKProgressButton_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GBKProgressButton_Example.modulemap"; sourceTree = "<group>"; };
+		671F90F388CA90EA50607E34CB444967 /* Pods-GBKProgressButton_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GBKProgressButton_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6888272FA828FA1B1B4ED9740ED4DF8B /* GBKProgressButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GBKProgressButton.modulemap; sourceTree = "<group>"; };
+		6DC87ECF13A834547E75C5584878147C /* Pods_GBKProgressButton_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GBKProgressButton_Example.framework; path = "Pods-GBKProgressButton_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE078587771C72E30CFDABA8016CD51 /* GBKProgressButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GBKProgressButton.framework; path = GBKProgressButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0EC00E5427724485096E88F66748C3 /* Pods-GBKProgressButton_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBKProgressButton_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		758EE9FC9104B0D9BB925807B8E546D6 /* Pods-GBKProgressButton_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBKProgressButton_Example-umbrella.h"; sourceTree = "<group>"; };
+		8E77A807CC109CDEAFE69B447058407F /* Pods-GBKProgressButton_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBKProgressButton_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		99C51FC6CD782633F12E20B2D7B349CE /* GBKProgressButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBKProgressButton-prefix.pch"; sourceTree = "<group>"; };
+		9A130285B504C43CA090F9A2DBF1B294 /* GBKProgressButton.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GBKProgressButton.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B3120AC5BA7BAA9E636F00868224B56F /* ProgressButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressButton.swift; path = GBKProgressButton/Classes/ProgressButton.swift; sourceTree = "<group>"; };
+		B66DE84E4FEF1891C446320BE0F7788F /* GBKProgressButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBKProgressButton-dummy.m"; sourceTree = "<group>"; };
+		C669C0D7B3EDD7E0A830BD9F4E194CEC /* Pods-GBKProgressButton_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBKProgressButton_Example-Info.plist"; sourceTree = "<group>"; };
+		C9314F90FAD182F949F1079D4A17496C /* Pods-GBKProgressButton_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBKProgressButton_Tests-Info.plist"; sourceTree = "<group>"; };
+		CB0F159A1D58E3040D8F6E66124EAD17 /* Pods-GBKProgressButton_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBKProgressButton_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		CC73BE9C70D940D49BA4CDD6D9A89117 /* GBKProgressButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBKProgressButton.debug.xcconfig; sourceTree = "<group>"; };
+		CE0A17888792874625FE3AA01C07EC23 /* Pods-GBKProgressButton_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GBKProgressButton_Tests.modulemap"; sourceTree = "<group>"; };
+		CF273BFF98B9CD4011F38CA49E8827A5 /* Pods-GBKProgressButton_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBKProgressButton_Tests-dummy.m"; sourceTree = "<group>"; };
+		D6C7F34B55FAD832E0418D83BCCFB8B2 /* Pods-GBKProgressButton_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GBKProgressButton_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D7ECDD771A1BF86FE561137234F910B5 /* Pods-GBKProgressButton_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GBKProgressButton_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D949DBDD9323C9425B0EFED1A14DC7E8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DC6E3AACB836C6C6CBF5C5648BC4F25A /* GBKProgressButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBKProgressButton.release.xcconfig; sourceTree = "<group>"; };
+		E45604462FD3497D534A283AB5ED7F17 /* AnimationSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSettings.swift; path = GBKProgressButton/Classes/AnimationSettings.swift; sourceTree = "<group>"; };
+		F470A475DABFBA177F2882177283F199 /* Pods-GBKProgressButton_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBKProgressButton_Example-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33C3D72A88B9DBEE6C9819973513A8FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85EE101EC6BADDC52763486926DE2260 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24B19774DC12DB733D1317732400B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60270C5972AC8C25CB0C78A03288BED3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEC3C06320AFD646425E6F28ADEBD8E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D581BE33080AFE6F9C3845DEF46E48AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D153328C1E45562548C3EFCBB4548E5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52FCBFD39306681C96207684475332C1 /* GBKProgressButton */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		52FCBFD39306681C96207684475332C1 /* GBKProgressButton */ = {
+			isa = PBXGroup;
+			children = (
+				E45604462FD3497D534A283AB5ED7F17 /* AnimationSettings.swift */,
+				B3120AC5BA7BAA9E636F00868224B56F /* ProgressButton.swift */,
+				23A04856144CB4651F53E9703B7C03D1 /* ProgressTitleLabel.swift */,
+				80E756117E98FA93B230525CA0C55BB8 /* Pod */,
+				63D1D7EF0870E36543C585071BF3EC03 /* Support Files */,
+			);
+			name = GBKProgressButton;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		63D1D7EF0870E36543C585071BF3EC03 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6888272FA828FA1B1B4ED9740ED4DF8B /* GBKProgressButton.modulemap */,
+				B66DE84E4FEF1891C446320BE0F7788F /* GBKProgressButton-dummy.m */,
+				0F9B5433EE845961CD982BF9CA1CFA66 /* GBKProgressButton-Info.plist */,
+				99C51FC6CD782633F12E20B2D7B349CE /* GBKProgressButton-prefix.pch */,
+				4E0F827F7E5F6348E205C6063EFED232 /* GBKProgressButton-umbrella.h */,
+				CC73BE9C70D940D49BA4CDD6D9A89117 /* GBKProgressButton.debug.xcconfig */,
+				DC6E3AACB836C6C6CBF5C5648BC4F25A /* GBKProgressButton.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GBKProgressButton";
+			sourceTree = "<group>";
+		};
+		6E59E677E9C779B1FEE966BF60F4F3F0 /* Pods-GBKProgressButton_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A17888792874625FE3AA01C07EC23 /* Pods-GBKProgressButton_Tests.modulemap */,
+				8E77A807CC109CDEAFE69B447058407F /* Pods-GBKProgressButton_Tests-acknowledgements.markdown */,
+				D6C7F34B55FAD832E0418D83BCCFB8B2 /* Pods-GBKProgressButton_Tests-acknowledgements.plist */,
+				CF273BFF98B9CD4011F38CA49E8827A5 /* Pods-GBKProgressButton_Tests-dummy.m */,
+				C9314F90FAD182F949F1079D4A17496C /* Pods-GBKProgressButton_Tests-Info.plist */,
+				20D877BC7272002330D1C8E35EFDB570 /* Pods-GBKProgressButton_Tests-umbrella.h */,
+				6F0EC00E5427724485096E88F66748C3 /* Pods-GBKProgressButton_Tests.debug.xcconfig */,
+				232DB178ED15F059C926AB95EE605EA8 /* Pods-GBKProgressButton_Tests.release.xcconfig */,
+			);
+			name = "Pods-GBKProgressButton_Tests";
+			path = "Target Support Files/Pods-GBKProgressButton_Tests";
+			sourceTree = "<group>";
+		};
+		778A7A77F27D8A038AD26EC576B81993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EE078587771C72E30CFDABA8016CD51 /* GBKProgressButton.framework */,
+				6DC87ECF13A834547E75C5584878147C /* Pods_GBKProgressButton_Example.framework */,
+				4CC1A2FA220805CD7676CC7E598C2B1F /* Pods_GBKProgressButton_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80E756117E98FA93B230525CA0C55BB8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9A130285B504C43CA090F9A2DBF1B294 /* GBKProgressButton.podspec */,
+				D949DBDD9323C9425B0EFED1A14DC7E8 /* LICENSE */,
+				386227A3E5E15D31506CFAF27328BB24 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		85FBC0B50D7AC03224ADE9B355B08F29 /* Pods-GBKProgressButton_Example */ = {
+			isa = PBXGroup;
+			children = (
+				61A4BE66DB095B5BE22FA35296C3AC2C /* Pods-GBKProgressButton_Example.modulemap */,
+				D7ECDD771A1BF86FE561137234F910B5 /* Pods-GBKProgressButton_Example-acknowledgements.markdown */,
+				CB0F159A1D58E3040D8F6E66124EAD17 /* Pods-GBKProgressButton_Example-acknowledgements.plist */,
+				F470A475DABFBA177F2882177283F199 /* Pods-GBKProgressButton_Example-dummy.m */,
+				671F90F388CA90EA50607E34CB444967 /* Pods-GBKProgressButton_Example-frameworks.sh */,
+				C669C0D7B3EDD7E0A830BD9F4E194CEC /* Pods-GBKProgressButton_Example-Info.plist */,
+				758EE9FC9104B0D9BB925807B8E546D6 /* Pods-GBKProgressButton_Example-umbrella.h */,
+				493E8A2794BBA86527A8FDC9E81FA661 /* Pods-GBKProgressButton_Example.debug.xcconfig */,
+				0F0C6537C45507B03E738093D833BD0A /* Pods-GBKProgressButton_Example.release.xcconfig */,
+			);
+			name = "Pods-GBKProgressButton_Example";
+			path = "Target Support Files/Pods-GBKProgressButton_Example";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C2E6E639A7512A2128F6E9D0258F8A26 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				85FBC0B50D7AC03224ADE9B355B08F29 /* Pods-GBKProgressButton_Example */,
+				6E59E677E9C779B1FEE966BF60F4F3F0 /* Pods-GBKProgressButton_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				0D153328C1E45562548C3EFCBB4548E5 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				778A7A77F27D8A038AD26EC576B81993 /* Products */,
+				C2E6E639A7512A2128F6E9D0258F8A26 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9FE090E1061F8BCAF457C5249125E904 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795347AEFDC50DABE1F07C51941D3B7E /* Pods-GBKProgressButton_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B99B62B96D5E1FB884CB44DDFBB91067 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ABB0678CF617DB0B33B2656D2E232D1 /* GBKProgressButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C210DACF8253B944A7F71C41F527F8EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6523B7B5D987BBA219343D7AE4CB61D /* Pods-GBKProgressButton_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3644EB81A776773BA5D63BD7593760A4 /* Pods-GBKProgressButton_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C82AFDA92BD1200C3728E2ADADC1A7C0 /* Build configuration list for PBXNativeTarget "Pods-GBKProgressButton_Tests" */;
+			buildPhases = (
+				9FE090E1061F8BCAF457C5249125E904 /* Headers */,
+				BF018EE95EFE45AF1CD7CB759C19CF4D /* Sources */,
+				D24B19774DC12DB733D1317732400B79 /* Frameworks */,
+				7A7B295499A43E3F77F76632CF49362F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06E8F10FB2524DCE4B03A06E615DCBF4 /* PBXTargetDependency */,
+			);
+			name = "Pods-GBKProgressButton_Tests";
+			productName = "Pods-GBKProgressButton_Tests";
+			productReference = 4CC1A2FA220805CD7676CC7E598C2B1F /* Pods_GBKProgressButton_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7089B3D9B0369D2E689633354E8ACCBE /* Pods-GBKProgressButton_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B585DDC2CB4EDE4679AAA7F479FD7DB1 /* Build configuration list for PBXNativeTarget "Pods-GBKProgressButton_Example" */;
+			buildPhases = (
+				C210DACF8253B944A7F71C41F527F8EF /* Headers */,
+				44EE395D7D3743901429E12B5FEAD3C8 /* Sources */,
+				FEC3C06320AFD646425E6F28ADEBD8E7 /* Frameworks */,
+				E47C4D0564C690A5499E01A7B1EC1B83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE6B684C937DA861541C5052A214667B /* PBXTargetDependency */,
+			);
+			name = "Pods-GBKProgressButton_Example";
+			productName = "Pods-GBKProgressButton_Example";
+			productReference = 6DC87ECF13A834547E75C5584878147C /* Pods_GBKProgressButton_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81A900E93EA3534D5AA1AB82CEC5BDEF /* GBKProgressButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 324F5F0CD896E80A119EF3AE3ACFA580 /* Build configuration list for PBXNativeTarget "GBKProgressButton" */;
+			buildPhases = (
+				B99B62B96D5E1FB884CB44DDFBB91067 /* Headers */,
+				3800A5C5A904448BB50EC5D911C32DB6 /* Sources */,
+				33C3D72A88B9DBEE6C9819973513A8FF /* Frameworks */,
+				C0665F934B3F7F8497E87955DE08D0A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GBKProgressButton;
+			productName = GBKProgressButton;
+			productReference = 6EE078587771C72E30CFDABA8016CD51 /* GBKProgressButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 778A7A77F27D8A038AD26EC576B81993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81A900E93EA3534D5AA1AB82CEC5BDEF /* GBKProgressButton */,
+				7089B3D9B0369D2E689633354E8ACCBE /* Pods-GBKProgressButton_Example */,
+				3644EB81A776773BA5D63BD7593760A4 /* Pods-GBKProgressButton_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A7B295499A43E3F77F76632CF49362F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0665F934B3F7F8497E87955DE08D0A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E47C4D0564C690A5499E01A7B1EC1B83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3800A5C5A904448BB50EC5D911C32DB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E46445161A20964A0B0BB48B26A83F23 /* AnimationSettings.swift in Sources */,
+				67F07003DED2B7209A58273A8F17E6D4 /* GBKProgressButton-dummy.m in Sources */,
+				ABB770AA08BB4456DDC982CFD43A0CE2 /* ProgressButton.swift in Sources */,
+				5D835E84A28E2330896EBDADAE22349C /* ProgressTitleLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44EE395D7D3743901429E12B5FEAD3C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D64493739FD89206B174482B8944340D /* Pods-GBKProgressButton_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF018EE95EFE45AF1CD7CB759C19CF4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CFD0CA10F7D74E9C2A2ED2782094C2A /* Pods-GBKProgressButton_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06E8F10FB2524DCE4B03A06E615DCBF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GBKProgressButton_Example";
+			target = 7089B3D9B0369D2E689633354E8ACCBE /* Pods-GBKProgressButton_Example */;
+			targetProxy = 9059C0E353490375926CF1E22499B98E /* PBXContainerItemProxy */;
+		};
+		CE6B684C937DA861541C5052A214667B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GBKProgressButton;
+			target = 81A900E93EA3534D5AA1AB82CEC5BDEF /* GBKProgressButton */;
+			targetProxy = 9C4AF9F36B3C89745A816D0B231B3BF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01C6CB1864017E27687FC9EA6AEFDE55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC6E3AACB836C6C6CBF5C5648BC4F25A /* GBKProgressButton.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GBKProgressButton/GBKProgressButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GBKProgressButton/GBKProgressButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GBKProgressButton/GBKProgressButton.modulemap";
+				PRODUCT_MODULE_NAME = GBKProgressButton;
+				PRODUCT_NAME = GBKProgressButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2D47F5065A4026BA0683833EF02E33AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F0C6537C45507B03E738093D833BD0A /* Pods-GBKProgressButton_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBKProgressButton_Example/Pods-GBKProgressButton_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GBKProgressButton_Example/Pods-GBKProgressButton_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64B3FB29583066BA77B5F46E77FC4757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 232DB178ED15F059C926AB95EE605EA8 /* Pods-GBKProgressButton_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBKProgressButton_Tests/Pods-GBKProgressButton_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GBKProgressButton_Tests/Pods-GBKProgressButton_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A1845F839143713797A0805DEC36960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC73BE9C70D940D49BA4CDD6D9A89117 /* GBKProgressButton.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GBKProgressButton/GBKProgressButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GBKProgressButton/GBKProgressButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GBKProgressButton/GBKProgressButton.modulemap";
+				PRODUCT_MODULE_NAME = GBKProgressButton;
+				PRODUCT_NAME = GBKProgressButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F0914C37361EDE76C6305893B34232F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0EC00E5427724485096E88F66748C3 /* Pods-GBKProgressButton_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBKProgressButton_Tests/Pods-GBKProgressButton_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GBKProgressButton_Tests/Pods-GBKProgressButton_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA50B85F25DF0D8BE590696EC414577F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493E8A2794BBA86527A8FDC9E81FA661 /* Pods-GBKProgressButton_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GBKProgressButton_Example/Pods-GBKProgressButton_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GBKProgressButton_Example/Pods-GBKProgressButton_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		324F5F0CD896E80A119EF3AE3ACFA580 /* Build configuration list for PBXNativeTarget "GBKProgressButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A1845F839143713797A0805DEC36960 /* Debug */,
+				01C6CB1864017E27687FC9EA6AEFDE55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B585DDC2CB4EDE4679AAA7F479FD7DB1 /* Build configuration list for PBXNativeTarget "Pods-GBKProgressButton_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA50B85F25DF0D8BE590696EC414577F /* Debug */,
+				2D47F5065A4026BA0683833EF02E33AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C82AFDA92BD1200C3728E2ADADC1A7C0 /* Build configuration list for PBXNativeTarget "Pods-GBKProgressButton_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0914C37361EDE76C6305893B34232F8 /* Debug */,
+				64B3FB29583066BA77B5F46E77FC4757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

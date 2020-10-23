@@ -1,0 +1,6 @@
+framework module Pods_GBKProgressButton_Tests {
+  umbrella header "Pods-GBKProgressButton_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - GBKProgressButton (0.1.0)
+
+DEPENDENCIES:
+  - GBKProgressButton (from `../`)
+
+EXTERNAL SOURCES:
+  GBKProgressButton:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GBKProgressButton: 9c4e22c7bd837b0a4f0bf4487f4b86c0b8502caf
+
+PODFILE CHECKSUM: 3c3316de5c4e6e6d2e25f497a71583cc35e85108
+
+COCOAPODS: 1.9.3

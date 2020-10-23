@@ -1,0 +1,6 @@
+framework module GBKProgressButton {
+  umbrella header "GBKProgressButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

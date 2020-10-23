@@ -1,0 +1,23 @@
+{
+  "name": "GBKProgressButton",
+  "version": "0.1.0",
+  "summary": "GBKProgressButton is a button which transforms to spinner or progress bar",
+  "homepage": "https://gitlab.gbksoft.net/gbksoft-mobile-department/ios/gbkprogressbutton.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Roman Mizin": "mizin.re@gbksoft.com"
+  },
+  "source": {
+    "git": "https://gitlab.gbksoft.net/gbksoft-mobile-department/ios/gbkprogressbutton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.1",
+  "source_files": "GBKProgressButton/Classes/**/*",
+  "swift_version": "5.1"
+}
