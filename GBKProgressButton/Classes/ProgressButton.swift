@@ -125,7 +125,7 @@ import UIKit
     private var multiplier: CGFloat {
         let perimeterRounded = 2 * (bounds.width + bounds.height - cornerRadius * (4 - .pi))
         let perimeterFull = 2 * (bounds.width + bounds.height)
-        let topPathLength = perimeterRounded - (perimeterFull - perimeterRounded) - (bounds.height * 2) - bounds.width
+        let topPathLength = perimeterRounded - (perimeterFull - perimeterRounded) - (bounds.height * 2) - bounds.width + (cornerRadius/4)
         let topPathHalf = topPathLength/2
         let topPathHalfPercenrage = topPathHalf/perimeterRounded
         return topPathHalfPercenrage
@@ -138,9 +138,10 @@ import UIKit
 
             buttonBorder.strokeStart = multiplier
             buttonBorder.strokeEnd = .zero
+            buttonBorder.lineCap = .round
             buttonBorder.strokeColor = primaryColor.cgColor
-            downloadingLine.strokeStart = 0.15//.zero
-            downloadingLine.strokeEnd = 1//0.85
+            downloadingLine.strokeStart = 0.15
+            downloadingLine.strokeEnd = 1
             downloadingLine.strokeColor = primaryColor.cgColor
         case .rotateToEnd:
             downloadProgressLine.strokeStart = .zero
@@ -382,14 +383,14 @@ private extension GBKProgressButton {
             from: 0.85,
             to: 0.15,
             duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn))
+            timingFunction: CAMediaTimingFunction(name: .easeIn))
 
         let borderStrokeEndAnimation = getAnimation(
             path: .strokeEnd,
             from: 1,
             to: 0.1,
             duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut))
+            timingFunction: CAMediaTimingFunction(name: .easeOut))
 
         CATransaction.begin()
         CATransaction.setDisableActions(!animated)
@@ -480,13 +481,13 @@ private extension GBKProgressButton {
             from: animationStart,
             to: value,
             duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
+            timingFunction: CAMediaTimingFunction(name: .linear))
 
         let downloadingAnimation = getAnimation(
             path: .strokeEnd,
             from: animationStart,
             to: value, duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear))
+            timingFunction: CAMediaTimingFunction(name: .linear))
 
         prevValue = value
         CATransaction.begin()
@@ -525,21 +526,21 @@ private extension GBKProgressButton {
             path: .strokeEnd,
             from: multiplier, to: 1,
             duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn))
+            timingFunction: CAMediaTimingFunction(name: .easeIn))
 
         let strokeEndAnimation = getAnimation(
             path: .strokeStart,
             from: 0,
             to: 1,
             duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut))
+            timingFunction: CAMediaTimingFunction(name: .easeOut))
 
         let lineColorAnimation = getAnimation(
             path: .strokeColor,
             from: cancel ? primaryColor.cgColor : downloadProgressColor.cgColor,
             to: primaryColor.cgColor,
             duration: animationDuration,
-            timingFunction: CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut))
+            timingFunction: CAMediaTimingFunction(name: .easeOut))
 
         CATransaction.begin()
         CATransaction.setDisableActions(!animated)
@@ -568,7 +569,7 @@ private extension GBKProgressButton {
         basicAnimation.fromValue = fromValue
         basicAnimation.toValue = toValue
         basicAnimation.timingFunction = timingFunction
-        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
+        basicAnimation.fillMode = .forwards
         basicAnimation.duration = duration
         return basicAnimation
     }

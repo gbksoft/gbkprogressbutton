@@ -1,5 +1,5 @@
 PODS:
-  - GBKProgressButton (0.1.0)
+  - GBKProgressButton (0.1.3)
 
 DEPENDENCIES:
   - GBKProgressButton (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GBKProgressButton: 9c4e22c7bd837b0a4f0bf4487f4b86c0b8502caf
+  GBKProgressButton: 7a2109b7346c9a19c95b6bddc73f5639e4632d53
 
 PODFILE CHECKSUM: 3c3316de5c4e6e6d2e25f497a71583cc35e85108
 
