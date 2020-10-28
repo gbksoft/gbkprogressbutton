@@ -51,10 +51,41 @@ pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-departme
 <img src="/Media/inspectableCustomizations.png" width="500px">
 <br>
 <br>
-You can also customize button title appearance (like <b>Font, Attributed Text etc.</b>) by accesing <b>titleLabel</b>
+<b>PUBLIC API</b>
 <br>
 ```swift
-public private(set) lazy var titleLabel = ProgressTitleLabel(animationSettings: animationSettings)
+    @IBInspectable public var lineWidth: CGFloat
+
+    @IBInspectable public var primaryColor: UIColor
+
+    @IBInspectable public var downloadProgressColor: UIColor
+
+    @IBInspectable public lazy var animationDuration: Double { get set }
+
+    @IBInspectable public var titleText: String { get set }
+
+    @IBInspectable public var titleColor: UIColor { get set }
+
+    @IBInspectable public var titleImage: UIImage? { get set }
+
+    @IBInspectable public lazy var cornerRadius: CGFloat { get set }
+
+    public lazy var font: UIFont { get set }
+
+    public var attributedText: NSAttributedString? { get set }
+
+    public private(set) lazy var imageView: UIImageView { get set }
+
+    public private(set) lazy var titleLabel: UILabel { get set }
+
+    public var currentProgress: CGFloat { get }
+
+    /// To reset button in UITableViewCell/UICollectionViewCell
+    public func prepareForReuse()
+
+    public func reset()
+
+    public func animate(to newValue: CGFloat = 0.0, animated: Bool = true, downloaded: (() -> Void)? = nil)
 ```
 ## Author
 
