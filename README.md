@@ -5,9 +5,10 @@
 <!-- ![Preview](/Media/preview.png) -->
 <img src="/Media/preview.gif" width="270px">
 </p> 
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the <b>example project</b>, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
@@ -22,13 +23,14 @@ pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-departme
 
 ## Usage 
 
-XIB
+<b>XIB</b>
 
 - Add new <b>UIView</b>
 - In Identity Inspector set GBKProgressButton as a Custom Class 
 - Customize parameters In Attributes Inspector 
+- To handle button touch add @IBAction, with <b>TouchUpInside</b> value
+- Call <b>animate()</b> method from previously added @IBAction
 
-Для отработки нажатия на кнопку, добавить @IBAction, со значением <b>TouchUpInside</b> (по умолчанию стоит ValueChanged)
 <br>
 <img src="/Media/ibAction.png" width="270px">
 
@@ -36,15 +38,18 @@ XIB
 
 <b>Start Animation</b>
 <br>
-<img src="/Media/startAnimating.png" width="270px">
+<img src="/Media/startAnimating.png" width="500px">
+<br>
 <br>
 <b>Stop Animation</b>
 <br>
-<img src="/Media/stopAnimating.png" width="270px">
+<img src="/Media/stopAnimating.png" width="500px">
+<br>
 <br>
 <b>Customizations</b>
 <br>
-<img src="/Media/inspectableCustomizations.png" width="270px">
+<img src="/Media/inspectableCustomizations.png" width="500px">
+<br>
 <br>
 You can also customize button title appearance (like <b>Font, Attributed Text etc.</b>) by accesing <b>titleLabel</b>
 <br>
