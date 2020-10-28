@@ -21,6 +21,8 @@ import UIKit
         case downloading
     }
 
+    // MARK: - Public API
+
     @IBInspectable public var lineWidth: CGFloat = 2
     @IBInspectable public var primaryColor: UIColor = UIColor(white: 0.9, alpha: 1)
     @IBInspectable public var downloadProgressColor: UIColor = UIColor(red: 0.49, green: 0.74, blue: 0.88, alpha: 1.00)
@@ -43,15 +45,48 @@ import UIKit
         }
     }
 
+    @IBInspectable public var titleImage: UIImage? {
+        didSet {
+            imageView.image = titleImage
+        }
+    }
+
     @IBInspectable public lazy var cornerRadius: CGFloat = circleRadius
 
-    public lazy var font: UIFont = UIFont.systemFont(ofSize: 14) {
+    public lazy var font: UIFont = UIFont.systemFont(ofSize: 13) {
         didSet {
             titleLabel.font = font
         }
     }
 
-    public private(set) lazy var titleLabel = ProgressTitleLabel(animationSettings: animationSettings)
+    public var attributedText: NSAttributedString? {
+        didSet {
+            titleLabel.attributedText = attributedText
+        }
+    }
+
+    private lazy var conentStackView: ProgressTitleStackView = {
+        let stack = ProgressTitleStackView(animationSettings: animationSettings, arrangedSubviews: [imageView, titleLabel])
+        return stack
+    }()
+
+    public private(set) lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = titleImage
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = false
+        return imageView
+    }()
+
+    public private(set) lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = font
+        label.textColor = .black
+        return label
+    }()
+
     private let animationSettings = AnimationSettings()
     private var prevValue: CGFloat = 0
     private var animationDelayWorkItem: DispatchWorkItem?
@@ -59,6 +94,9 @@ import UIKit
     public var currentProgress: CGFloat {
         prevValue
     }
+
+    // MARK: - END of Public API
+
     private var setBackgroundHidden: Bool = false {
         didSet {
             UIView.transition(
@@ -173,7 +211,14 @@ import UIKit
     }
 
     private func commonInit() {
-        addSubview(titleLabel)
+        addSubview(conentStackView)
+        conentStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        conentStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        conentStackView.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor,constant: 4).isActive = true
+        conentStackView.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -4).isActive = true
+        conentStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -4).isActive = true
+        conentStackView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 4).isActive = true
+        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
         isUserInteractionEnabled = true
         configureLabel()
     }
@@ -181,7 +226,6 @@ import UIKit
     override public func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = cornerRadius
-        titleLabel.frame = bounds.insetBy(dx: 4, dy: 4)
         configureInspectables()
     }
 }
@@ -226,6 +270,26 @@ private extension GBKProgressButton {
         if titleLabel.textColor != titleColor {
             titleLabel.textColor = titleColor
         }
+
+        if imageView.image != titleImage {
+            imageView.image = titleImage
+        }
+
+        if titleLabel.font != font {
+            titleLabel.font = font
+        }
+
+        if attributedText != nil, titleLabel.attributedText != attributedText {
+            titleLabel.attributedText = attributedText
+            titleLabel.isHidden = attributedText!.string.isEmpty
+        } else if titleLabel.text != titleText {
+            titleLabel.text = titleText
+            titleLabel.isHidden = titleText.isEmpty
+        } else {
+            titleLabel.isHidden = titleText.isEmpty
+        }
+
+        imageView.isHidden = titleImage == nil
     }
 }
 
@@ -243,7 +307,7 @@ public extension GBKProgressButton {
             prevValue = 0
             downloadState = .none
             animationState = .none
-            titleLabel.setHidden = false
+            conentStackView.setHidden = false
             setBackgroundHidden = false
 
             buttonBorder.removeAllAnimations()
@@ -321,7 +385,7 @@ public extension GBKProgressButton {
         }
 
         animateBorderToCircle(animated: animated)
-        titleLabel.setHidden = true
+        conentStackView.setHidden = true
         setBackgroundHidden = true
     }
 
@@ -545,7 +609,7 @@ private extension GBKProgressButton {
         CATransaction.begin()
         CATransaction.setDisableActions(!animated)
         CATransaction.setCompletionBlock { [weak self] in
-            self?.titleLabel.setHidden = false
+            self?.conentStackView.setHidden = false
             self?.setBackgroundHidden = false
             self?.downloadState = .none
             self?.buttonBorder.strokeStart = .zero

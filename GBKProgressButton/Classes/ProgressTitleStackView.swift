@@ -1,5 +1,5 @@
 //
-//  ProgressTitleLabel.swift
+//  ProgressTitleStackView.swift
 //  GBKProgressButton
 //
 //  Created by Roman Mizin on 10/21/20.
@@ -8,23 +8,29 @@
 
 import UIKit
 
-public final class ProgressTitleLabel: UILabel {
+public final class ProgressTitleStackView: UIStackView {
 
     private let animationSettings: AnimationSettings
 
-    init(animationSettings: AnimationSettings) {
+    init(animationSettings: AnimationSettings, arrangedSubviews: [UIView]) {
         self.animationSettings = animationSettings
         super.init(frame: .zero)
         configure()
+
+        arrangedSubviews.forEach { (subview) in
+            addArrangedSubview(subview)
+        }
     }
 
-    required init?(coder: NSCoder) {
-        fatalError()
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func configure() {
-        textAlignment = .center
-        textColor = .black
+       isUserInteractionEnabled = false
+       translatesAutoresizingMaskIntoConstraints = false
+       alignment = .center
+       spacing = 4
     }
 
     var setHidden: Bool = false {

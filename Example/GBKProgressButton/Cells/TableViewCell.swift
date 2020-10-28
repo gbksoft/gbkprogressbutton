@@ -47,6 +47,9 @@ class TableViewCell: UITableViewCell {
             switch currentDownloadState.state {
             case .finished:
                 progressButton.titleText = Constants.open
+                if #available(iOS 13.0, *) {
+                    progressButton.titleImage = UIImage(systemName: "checkmark.icloud")
+                }
                 return
             case .initiated:
                 progressButton.animate(to: currentDownloadState.progress, animated: false)
@@ -65,6 +68,9 @@ class TableViewCell: UITableViewCell {
 
                 self?.progressButton.animate(to: progress, downloaded: { [weak self] in
                     self?.progressButton.titleText = Constants.open
+                    if #available(iOS 13.0, *) {
+                        self?.progressButton.titleImage = UIImage(systemName: "checkmark.icloud")
+                    }
                 })
             })
         })

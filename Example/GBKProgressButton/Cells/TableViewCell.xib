@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,18 +21,20 @@
                         <rect key="frame" x="16" y="16" width="288" height="48"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-71-THh">
-                                <rect key="frame" x="0.0" y="14" width="188" height="20.5"/>
+                                <rect key="frame" x="0.0" y="14" width="168" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knK-Sk-7oT" customClass="GBKProgressButton" customModule="GBKProgressButton">
-                                <rect key="frame" x="198" y="4" width="90" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="178" y="4" width="110" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7nE-YR-lSb"/>
-                                    <constraint firstAttribute="width" constant="90" id="fUQ-0T-dPZ"/>
+                                    <constraint firstAttribute="width" constant="110" id="fUQ-0T-dPZ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="icloud.and.arrow.down" catalog="system"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="progressButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Evb-rG-zNL"/>
                                 </connections>
@@ -58,8 +59,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
     </resources>
 </document>
