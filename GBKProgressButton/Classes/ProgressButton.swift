@@ -65,11 +65,6 @@ import UIKit
         }
     }
 
-    private lazy var conentStackView: ProgressTitleStackView = {
-        let stack = ProgressTitleStackView(animationSettings: animationSettings, arrangedSubviews: [imageView, titleLabel])
-        return stack
-    }()
-
     public private(set) lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -87,15 +82,20 @@ import UIKit
         return label
     }()
 
-    private let animationSettings = AnimationSettings()
-    private var prevValue: CGFloat = 0
-    private var animationDelayWorkItem: DispatchWorkItem?
-
     public var currentProgress: CGFloat {
         prevValue
     }
 
     // MARK: - END of Public API
+
+    private lazy var conentStackView: ProgressTitleStackView = {
+        let stack = ProgressTitleStackView(animationSettings: animationSettings, arrangedSubviews: [imageView, titleLabel])
+        return stack
+    }()
+
+    private let animationSettings = AnimationSettings()
+    private var prevValue: CGFloat = 0
+    private var animationDelayWorkItem: DispatchWorkItem?
 
     private var setBackgroundHidden: Bool = false {
         didSet {
