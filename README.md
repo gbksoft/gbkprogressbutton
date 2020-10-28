@@ -1,11 +1,10 @@
 # GBKProgressButton
-# TODO: Написать нормальое описание
 
-[![CI Status](https://img.shields.io/travis/Roman Mizin/GBKProgressButton.svg?style=flat)](https://travis-ci.org/Roman Mizin/GBKProgressButton)
-[![Version](https://img.shields.io/cocoapods/v/GBKProgressButton.svg?style=flat)](https://cocoapods.org/pods/GBKProgressButton)
-[![License](https://img.shields.io/cocoapods/l/GBKProgressButton.svg?style=flat)](https://cocoapods.org/pods/GBKProgressButton)
-[![Platform](https://img.shields.io/cocoapods/p/GBKProgressButton.svg?style=flat)](https://cocoapods.org/pods/GBKProgressButton)
-
+<br>
+<p align="center"> 
+<!-- ![Preview](/Media/preview.png) -->
+<img src="/Media/preview.gif" width="270px">
+</p> 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
