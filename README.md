@@ -22,15 +22,35 @@ pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-departme
 
 ## Usage 
 
-Xib
+XIB
 
-Добавить на вью UIView
-В Identity Inspector в качетсве Custom Class указать GBKProgressButton
-В Attributes Inspector указать необходимые параметры
+- Add new <b>UIView</b>
+- In Identity Inspector set GBKProgressButton as a Custom Class 
+- Customize parameters In Attributes Inspector 
 
 Для отработки нажатия на кнопку, добавить @IBAction, со значением <b>TouchUpInside</b> (по умолчанию стоит ValueChanged)
 <br>
 <img src="/Media/ibAction.png" width="270px">
+
+## API
+
+<b>Start Animation</b>
+<br>
+<img src="/Media/startAnimating.png" width="270px">
+<br>
+<b>Stop Animation</b>
+<br>
+<img src="/Media/stopAnimating.png" width="270px">
+<br>
+<b>Customizations</b>
+<br>
+<img src="/Media/inspectableCustomizations.png" width="270px">
+<br>
+You can also customize button title appearance (like <b>Font, Attributed Text etc.</b>) by accesing <b>titleLabel</b>
+<br>
+```swift
+public private(set) lazy var titleLabel = ProgressTitleLabel(animationSettings: animationSettings)
+```
 ## Author
 
 Roman Mizin, mizin.re@gbksoft.com
