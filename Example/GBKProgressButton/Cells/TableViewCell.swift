@@ -20,7 +20,12 @@ class TableViewCell: UITableViewCell {
         static let open = "Open"
     }
 
-    @IBOutlet private weak var progressButton: GBKProgressButton!
+    @IBOutlet private weak var progressButton: GBKProgressButton! {
+        didSet {
+            progressButton.font = UIFont.systemFont(ofSize: 13, weight: .bold)
+            progressButton.titleColor = .white
+        }
+    }
 
     weak var delegate: TableViewCellDelegate?
 
@@ -34,6 +39,10 @@ class TableViewCell: UITableViewCell {
 
         progressButton.prepareForReuse()
         progressButton.titleText = Constants.download
+
+        if #available(iOS 13.0, *) {
+            progressButton.titleImage = UIImage(systemName: "icloud.and.arrow.down")
+        }
     }
 
     @IBAction func progressButtonDidTap(_ sender: GBKProgressButton) {
@@ -48,7 +57,7 @@ class TableViewCell: UITableViewCell {
             case .finished:
                 progressButton.titleText = Constants.open
                 if #available(iOS 13.0, *) {
-                    progressButton.titleImage = UIImage(systemName: "checkmark.icloud")
+                    progressButton.titleImage = nil
                 }
                 return
             case .initiated:
@@ -69,7 +78,7 @@ class TableViewCell: UITableViewCell {
                 self?.progressButton.animate(to: progress, downloaded: { [weak self] in
                     self?.progressButton.titleText = Constants.open
                     if #available(iOS 13.0, *) {
-                        self?.progressButton.titleImage = UIImage(systemName: "checkmark.icloud")
+                        self?.progressButton.titleImage = nil
                     }
                 })
             })

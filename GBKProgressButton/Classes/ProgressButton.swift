@@ -25,6 +25,7 @@ import UIKit
 
     @IBInspectable public var lineWidth: CGFloat = 2
     @IBInspectable public var primaryColor: UIColor = UIColor(white: 0.9, alpha: 1)
+    @IBInspectable public var progressBackgroundColor: UIColor = UIColor(white: 0.9, alpha: 1)
     @IBInspectable public var downloadProgressColor: UIColor = UIColor(red: 0.49, green: 0.74, blue: 0.88, alpha: 1.00)
 
     @IBInspectable public lazy var animationDuration: Double = animationSettings.duration {
@@ -51,7 +52,13 @@ import UIKit
         }
     }
 
-    @IBInspectable public lazy var cornerRadius: CGFloat = circleRadius
+    @IBInspectable public lazy var buttonCorners: CGFloat = circleRadius
+
+    @IBInspectable public var gradientTopColor: UIColor?
+    @IBInspectable public var gradientBottomColor: UIColor?
+    @IBInspectable public var gradientOpacity: CGFloat = 1
+    @IBInspectable public var gradientStartPoint: CGPoint = CGPoint(x: 0, y: 0.5)
+    @IBInspectable public var gradientEndPoint: CGPoint = CGPoint(x: 1, y: 0.5)
 
     public lazy var font: UIFont = UIFont.systemFont(ofSize: 13) {
         didSet {
@@ -88,6 +95,10 @@ import UIKit
 
     // MARK: - END of Public API
 
+    public override class var layerClass: AnyClass {
+        CAGradientLayer.self
+    }
+
     private lazy var conentStackView: ProgressTitleStackView = {
         let stack = ProgressTitleStackView(animationSettings: animationSettings, arrangedSubviews: [imageView, titleLabel])
         return stack
@@ -115,11 +126,17 @@ import UIKit
         willSet(newValue) {
             animationStateWillChange(to: newValue)
         }
+        didSet {
+            if animationState != .none {
+                configureGradient()
+            }
+        }
     }
 
     private var downloadState: DownloadState = .none {
         didSet {
             isUserInteractionEnabled = downloadState == .none
+            configureGradient()
         }
     }
 
@@ -128,7 +145,7 @@ import UIKit
         layer.bounds = bounds
         layer.position = CGPoint(x: bounds.width / 2.0, y: bounds.height / 2.0)
         layer.fillColor = UIColor.clear.cgColor
-        layer.strokeColor = primaryColor.cgColor
+        layer.strokeColor = progressBackgroundColor.cgColor
         layer.lineWidth = lineWidth
         layer.path = circlePath.cgPath
         layer.strokeStart = 0
@@ -154,16 +171,16 @@ import UIKit
         layer.bounds = bounds
         layer.position = CGPoint(x: bounds.width / 2.0, y: bounds.height / 2.0)
         layer.fillColor = UIColor.clear.cgColor
-        layer.strokeColor = primaryColor.cgColor
+        layer.strokeColor = progressBackgroundColor.cgColor// color().cgColor
         layer.lineWidth = lineWidth
         layer.path = borderPath.cgPath
         return layer
     }()
 
     private var multiplier: CGFloat {
-        let perimeterRounded = 2 * (bounds.width + bounds.height - cornerRadius * (4 - .pi))
+        let perimeterRounded = 2 * (bounds.width + bounds.height - buttonCorners * (4 - .pi))
         let perimeterFull = 2 * (bounds.width + bounds.height)
-        let topPathLength = perimeterRounded - (perimeterFull - perimeterRounded) - (bounds.height * 2) - bounds.width + (cornerRadius/4)
+        let topPathLength = perimeterRounded - (perimeterFull - perimeterRounded) - (bounds.height * 2) - bounds.width + (buttonCorners/4)
         let topPathHalf = topPathLength/2
         let topPathHalfPercenrage = topPathHalf/perimeterRounded
         return topPathHalfPercenrage
@@ -173,19 +190,20 @@ import UIKit
         switch newValue {
         case .borderToCircle:
             buttonBorder.path = borderPath.cgPath
-
             buttonBorder.strokeStart = multiplier
             buttonBorder.strokeEnd = .zero
             buttonBorder.lineCap = .round
-            buttonBorder.strokeColor = primaryColor.cgColor
+            buttonBorder.strokeColor = progressBackgroundColor.cgColor//color().cgColor
             downloadingLine.strokeStart = 0.15
             downloadingLine.strokeEnd = 1
-            downloadingLine.strokeColor = primaryColor.cgColor
+            downloadingLine.strokeColor = progressBackgroundColor.cgColor//color().cgColor
         case .rotateToEnd:
             downloadProgressLine.strokeStart = .zero
             downloadProgressLine.strokeEnd = .zero
+            downloadProgressLine.lineCap = .round
             downloadingLine.strokeStart = .zero
             downloadingLine.strokeEnd = 1
+            downloadingLine.lineCap = .round
         case .downloading:
             downloadProgressLine.strokeColor = downloadProgressColor.cgColor
         case .none:
@@ -196,7 +214,8 @@ import UIKit
             downloadingLine.strokeEnd = .zero
             downloadProgressLine.strokeStart = 1
             downloadProgressLine.strokeEnd = 1
-        case .circleRotation: break
+        case .circleRotation:
+            downloadingLine.lineCap = .round
         }
     }
 
@@ -225,8 +244,9 @@ import UIKit
 
     override public func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = cornerRadius
+        layer.cornerRadius = buttonCorners
         configureInspectables()
+        configureGradient()
     }
 }
 
@@ -241,7 +261,7 @@ private extension GBKProgressButton {
 
     func configureLayer() {
 
-        layer.cornerRadius = cornerRadius
+        layer.cornerRadius = buttonCorners
 
         if buttonBorder.superlayer == nil {
             layer.addSublayer(buttonBorder)
@@ -309,6 +329,7 @@ public extension GBKProgressButton {
             animationState = .none
             conentStackView.setHidden = false
             setBackgroundHidden = false
+            configureGradient()
 
             buttonBorder.removeAllAnimations()
             downloadingLine.removeAllAnimations()
@@ -398,6 +419,49 @@ public extension GBKProgressButton {
     }
 }
 
+// MARK: - Gradient
+
+private extension GBKProgressButton {
+
+    func configureGradient() {
+        guard let topColor = gradientTopColor, let bottomColor = gradientBottomColor else {
+            return
+        }
+
+        let layer = self.layer as? CAGradientLayer
+        layer?.startPoint = gradientStartPoint
+        layer?.endPoint = gradientEndPoint
+        layer?.colors = animationState == .none ? [
+            topColor.withAlphaComponent(gradientOpacity).cgColor,
+            bottomColor.withAlphaComponent(gradientOpacity).cgColor
+        ] : []
+    }
+
+    //Gradient color
+    func color() -> UIColor {
+
+        guard let topColor = gradientTopColor, let bottomColor = gradientBottomColor else {
+            return primaryColor
+        }
+
+        let backgroundGradientLayer = CAGradientLayer()
+        backgroundGradientLayer.frame = bounds
+        backgroundGradientLayer.startPoint = gradientStartPoint
+        backgroundGradientLayer.endPoint = gradientEndPoint
+
+        let cgColors = [topColor, bottomColor].map({ $0.cgColor })
+        backgroundGradientLayer.colors = cgColors
+        UIGraphicsBeginImageContextWithOptions(backgroundGradientLayer.bounds.size, false, UIScreen.main.scale)
+        if let context = UIGraphicsGetCurrentContext() {
+            backgroundGradientLayer.render(in: context)
+        }
+
+        let backgroundColorImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return UIColor(patternImage: backgroundColorImage ?? UIImage())
+    }
+}
+
 // MARK: - Paths
 
 private extension GBKProgressButton {
@@ -410,7 +474,7 @@ private extension GBKProgressButton {
     }
 
     var borderPath: UIBezierPath {
-        UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
+        UIBezierPath(roundedRect: bounds, cornerRadius: buttonCorners)
     }
 }
 
@@ -601,8 +665,8 @@ private extension GBKProgressButton {
 
         let lineColorAnimation = getAnimation(
             path: .strokeColor,
-            from: cancel ? primaryColor.cgColor : downloadProgressColor.cgColor,
-            to: primaryColor.cgColor,
+            from: cancel ? progressBackgroundColor.cgColor : downloadProgressColor.cgColor,
+            to: progressBackgroundColor.cgColor,
             duration: animationDuration,
             timingFunction: CAMediaTimingFunction(name: .easeOut))
 
@@ -613,6 +677,8 @@ private extension GBKProgressButton {
             self?.setBackgroundHidden = false
             self?.downloadState = .none
             self?.buttonBorder.strokeStart = .zero
+            self?.buttonBorder.removeFromSuperlayer()
+
             downloaded?()
         }
 

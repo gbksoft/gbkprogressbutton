@@ -34,6 +34,18 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="icloud.and.arrow.down" catalog="system"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientTopColor">
+                                        <color key="value" red="0.48627450980392156" green="0.56470588235294117" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientBottomColor">
+                                        <color key="value" red="0.77647058823529413" green="0.5607843137254902" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="downloadProgressColor">
+                                        <color key="value" red="0.77647058820000003" green="0.56078431370000004" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="progressButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Evb-rG-zNL"/>
