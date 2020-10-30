@@ -4,6 +4,7 @@
 <p align="center"> 
 <!-- ![Preview](/Media/preview.png) -->
 <img src="/Media/preview.gif" width="270px">
+<img src="/Media/preview1.gif" width="270px">
 </p> 
 
 ## Example
@@ -18,7 +19,7 @@ GBKProgressButton is available through [CocoaPods](https://cocoapods.org). To in
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkprogressbutton.git', :tag => '0.1.4'
+pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkprogressbutton.git', :tag => '0.1.5'
 ```
 
 ## Usage 
@@ -54,9 +55,11 @@ pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-departme
 <b>WHOLE PUBLIC API</b>
 <br>
 ```swift
-    @IBInspectable public var lineWidth: CGFloat
+     @IBInspectable public var lineWidth: CGFloat
 
     @IBInspectable public var primaryColor: UIColor
+
+    @IBInspectable public var progressBackgroundColor: UIColor
 
     @IBInspectable public var downloadProgressColor: UIColor
 
@@ -68,7 +71,17 @@ pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-departme
 
     @IBInspectable public var titleImage: UIImage? { get set }
 
-    @IBInspectable public lazy var cornerRadius: CGFloat { get set }
+    @IBInspectable public lazy var buttonCorners: CGFloat { get set }
+
+    @IBInspectable public var gradientTopColor: UIColor?
+
+    @IBInspectable public var gradientBottomColor: UIColor?
+
+    @IBInspectable public var gradientOpacity: CGFloat
+
+    @IBInspectable public var gradientStartPoint: CGPoint
+
+    @IBInspectable public var gradientEndPoint: CGPoint
 
     public lazy var font: UIFont { get set }
 
