@@ -19,7 +19,7 @@ GBKProgressButton is available through [CocoaPods](https://cocoapods.org). To in
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkprogressbutton.git', :tag => '0.1.5'
+pod 'GBKProgressButton', :git => 'git@gitlab.gbksoft.net:gbksoft-mobile-department/ios/gbkprogressbutton.git', :tag => '0.1.6'
 ```
 
 ## Usage 
