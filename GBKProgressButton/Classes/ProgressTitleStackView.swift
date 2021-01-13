@@ -27,31 +27,28 @@ public final class ProgressTitleStackView: UIStackView {
     }
 
     private func configure() {
-       isUserInteractionEnabled = false
-       translatesAutoresizingMaskIntoConstraints = false
-       alignment = .center
-       spacing = 4
+        isUserInteractionEnabled = false
+        translatesAutoresizingMaskIntoConstraints = false
+        alignment = .center
+        spacing = 4
     }
 
-    var setHidden: Bool = false {
-        didSet {
-
-            if alpha == .zero {
-                isHidden = setHidden
-            }
-
-            UIView.transition(
-                with: self,
-                duration: animationSettings.duration,
-                options: .curveEaseOut,
-                animations: { [weak self] in
-                    guard let self = self else { return }
-                    self.alpha = self.setHidden ? .zero : 1
-
-                }, completion: { [weak self] _ in
-                    guard let self = self else { return }
-                    self.isHidden = self.setHidden
-                })
+    func setHidden(_ state: Bool) {
+        if alpha == .zero {
+            isHidden = state
         }
+
+        UIView.transition(
+            with: self,
+            duration: animationSettings.duration,
+            options: .curveEaseOut,
+            animations: { [weak self] in
+                guard let self = self else { return }
+                self.alpha = state ? .zero : 1
+
+            }, completion: { [weak self] _ in
+                guard let self = self else { return }
+                self.isHidden = state
+            })
     }
 }
