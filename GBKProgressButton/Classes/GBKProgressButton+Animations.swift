@@ -75,7 +75,7 @@ extension GBKProgressButton {
             return
         }
         animationState = .rotateToEnd
-        let currentRotationAngle = atan2(downloadingLine.presentation()!.transform.m12, downloadingLine.presentation()!.transform.m11)
+        let currentRotationAngle = atan2(downloadingLine.presentation()?.transform.m12 ?? 0, downloadingLine.presentation()?.transform.m11 ?? 0)
         let circleRotateAnimation = getAnimation(
             path: .transformRotation,
             from: currentRotationAngle,
@@ -116,7 +116,7 @@ extension GBKProgressButton {
         downloadProgressLine.strokeStart = 0
         downloadingLine.strokeStart = value
         let animationDuration = 1.0
-        let animationStart = prevValue == 0 ? 0 : downloadProgressLine.presentation()!.strokeEnd
+        let animationStart = prevValue == 0 ? 0 : (downloadProgressLine.presentation()?.strokeEnd ?? 0)
         let downloadingLineAnimation = getAnimation(
             path: .strokeStart,
             from: animationStart,
