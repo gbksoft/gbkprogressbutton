@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Animations
 
-extension GBKProgressButton {
+public extension GBKProgressButton {
 
     /// STEP 1: Animating Button to Circle
     func animateBorderToCircle(animated: Bool = true) {

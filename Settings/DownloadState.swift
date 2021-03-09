@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DownloadState {
+public enum DownloadState {
     case none
     case pending
     case downloading
