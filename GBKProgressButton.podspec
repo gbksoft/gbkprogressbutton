@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://gitlab.gbksoft.net/gbksoft-mobile-department/ios/gbkprogressbutton.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
   s.swift_version = '5.1'
-  s.source_files = 'GBKProgressButton/Classes/**/*'
+  s.source_files = 'GBKProgressButton/**/*'
 end
