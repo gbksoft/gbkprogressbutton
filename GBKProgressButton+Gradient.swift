@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Gradient
 
-public extension GBKProgressButton {
+extension GBKProgressButton {
 
     func configureGradient() {
         guard let topColor = gradientTopColor, let bottomColor = gradientBottomColor else {

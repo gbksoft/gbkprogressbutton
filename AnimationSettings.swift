@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class AnimationSettings {
+final class AnimationSettings {
 
     enum State: String {
         case none
@@ -26,7 +26,7 @@ public final class AnimationSettings {
         case downloadindAnimation
     }
 
-    public enum KeyPath: String {
+    enum KeyPath: String {
         case backgroundColor
         case strokeEnd
         case strokeStart

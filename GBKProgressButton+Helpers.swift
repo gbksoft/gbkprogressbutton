@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Paths
 
-public extension GBKProgressButton {
+extension GBKProgressButton {
 
     var circlePath: UIBezierPath {
         let path = UIBezierPath()
@@ -25,7 +25,7 @@ public extension GBKProgressButton {
 
 // MARK: - Coordinates
 
-public extension GBKProgressButton {
+extension GBKProgressButton {
 
     var circleRadius: CGFloat {
         let minSize = min(bounds.maxY, bounds.maxX)

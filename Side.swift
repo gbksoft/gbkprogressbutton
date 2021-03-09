@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum Side {
+enum Side {
     case left
     case right
 }

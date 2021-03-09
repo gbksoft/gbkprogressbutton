@@ -122,33 +122,17 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		4B035F9B25AF50A500EA47F7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4B035F9625AF508700EA47F7 /* GBKProgressButton+Helpers.swift */,
-				4B035F8225AF4D0500EA47F7 /* GBKProgressButton+Animations.swift */,
-				4B035F8725AF4E3600EA47F7 /* GBKProgressButton+Gradient.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4B035F9F25AF50AD00EA47F7 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				E45604462FD3497D534A283AB5ED7F17 /* AnimationSettings.swift */,
-				4B035F8C25AF4FD300EA47F7 /* DownloadState.swift */,
-				4B035F9125AF4FE200EA47F7 /* Side.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		52FCBFD39306681C96207684475332C1 /* GBKProgressButton */ = {
 			isa = PBXGroup;
 			children = (
 				B3120AC5BA7BAA9E636F00868224B56F /* ProgressButton.swift */,
 				23A04856144CB4651F53E9703B7C03D1 /* ProgressTitleStackView.swift */,
-				4B035F9B25AF50A500EA47F7 /* Extensions */,
-				4B035F9F25AF50AD00EA47F7 /* Settings */,
+				4B035F9625AF508700EA47F7 /* GBKProgressButton+Helpers.swift */,
+				4B035F8225AF4D0500EA47F7 /* GBKProgressButton+Animations.swift */,
+				4B035F8725AF4E3600EA47F7 /* GBKProgressButton+Gradient.swift */,
+				E45604462FD3497D534A283AB5ED7F17 /* AnimationSettings.swift */,
+				4B035F8C25AF4FD300EA47F7 /* DownloadState.swift */,
+				4B035F9125AF4FE200EA47F7 /* Side.swift */,
 				80E756117E98FA93B230525CA0C55BB8 /* Pod */,
 				63D1D7EF0870E36543C585071BF3EC03 /* Support Files */,
 			);
